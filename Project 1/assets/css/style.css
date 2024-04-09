@@ -1,0 +1,60 @@
+body{
+    direction: rtl;
+    text-align: right;
+    font-family: Vazir;
+}
+
+
+
+
+
+
+
+#content{
+    width: 100%;
+}
+
+@media (min-width : 768px) {
+    #sidebar{
+        position: fixed; 
+        width: 200px;
+        height: 100%;
+        transition: transform .3s linear;      
+    }
+    #sidebar.collapse {
+        transform: translate(100% , 0);
+    }
+    #sidebar.collapse.show {
+        transform: translate(0 , 0);
+    }
+    #sidebar.collapsing {
+        transform : translate(100% , 0);
+    }
+
+    #content{
+        width: 100%;
+        transition: width .3s linear;    
+    }
+    #content.withSidebar{
+        width: calc(100% - 200px);
+    }
+}
+
+
+#sidebar .collapsed .myCollapseIcon{
+    transform: rotate(0deg);
+}
+#sidebar .myCollapseIcon{
+    transition:  transform 0.2s ease-in-out;
+    transform: rotate(-90deg);
+}
+
+
+
+
+
+
+
+
+
+

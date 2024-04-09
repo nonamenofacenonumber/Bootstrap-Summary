@@ -1,0 +1,12 @@
+To enable auto seggestion in VS code go to:
+File > Preferences > Settings > 
+type Quick Seggestions > Edit in settings.json
+
+and paste this code:
+
+
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+      }
